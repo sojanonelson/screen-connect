@@ -2,7 +2,8 @@
 Now it's very easy to mirror your smartphone screen on your laptop screen.
 
 # Usage
-```bash connect.sh```
+1, ```chmod +x connect.sh``` \
+2, ```bash connect.sh```
 
 # Requirement
 1, android-tool (ADB) \
