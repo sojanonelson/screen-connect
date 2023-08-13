@@ -7,8 +7,10 @@ device_lines=$(echo "$output" | grep -E '^[0-9a-f]+\s+device$')
 if [ -z "$device_lines" ]; then
   echo "Could not find any adb devices"
 else
+  echo -e "Enter the IP address of the phone: "
+  read ip
   adb tcpip 5555
-  adb connect 192.168.108.63:5555
+  adb connect $ip:5555
   echo -e "\e[1m\e[32m[+] ADB done!"
   echo "$device_lines"
 fi
